@@ -1,0 +1,10 @@
+Line 1: I did some reading to see what the deal is with this since it looks a lot like a
+constructor but with curly braces. I found this is called "uniform initialization" 
+because it is the same syntactically for various data types. I know we've seen this before
+(the vectors exercise comes to mind) so I wanted to understand it better.  Anyway, what 
+we've done is initialized a string x with the word "hello".
+
+Line 2: We are declaring rx as an lvalue reference and initializing it to refer to x.
+
+Line 3: Similar to line 2, but declaring crx as a constant means that even though it
+is referring to x, it will not be able to modify x.

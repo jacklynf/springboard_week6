@@ -1,0 +1,4 @@
+Line 6 is giving an error because even though the string object we're referring to is
+non-const, the reference to it is const. We can assign a non-const to a const just fine
+because we're just assigning a copy of it, but then that const item will have to abide
+by the laws of constness and therefore may not be modified.
