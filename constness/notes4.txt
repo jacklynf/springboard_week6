@@ -1,0 +1,6 @@
+Uncommenting line 1, line 2, or line 1 and 2 causes the compiler to complain about s.append. 
+This is because calling s.append() is attempting to modify the string but the string
+is declared as constant which is meant to be immutable.
+s.size() is allowed because it does not perform any changes to the variable, even declaring
+its parameter as constant.
+

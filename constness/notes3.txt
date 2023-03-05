@@ -1,0 +1,4 @@
+The outputs are different because when calling an overloaded function, the compiler will
+look for matching argument and parameter lists. When we passed a non-constant string, the
+compiler looked for a function that accepted those arguments, and similarly for cs, the
+compiler looked for a function that accepted a constant string. 

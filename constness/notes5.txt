@@ -1,0 +1,6 @@
+The compiler complains about non_const_by_ref() because we are sending the address
+of a constant variable to the function to be modified. This means that when append()
+is called, it is attempting to modify a constant which is not allowed.
+
+It does not complain on the call to non_const_by_val() because we're sending a copy - 
+this means we are not violating the original cs's const-ness.

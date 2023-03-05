@@ -1,0 +1,7 @@
+ncs is modified when it is passed by reference to a function with a non-constant parameter. 
+When passed by val, the original variable is not modified since the parameter is a copy.
+When passed to a function with a const parameter, it cannot be modified regardless of
+whether it was passed by reference or by value.
+
+cs is not modified because the original variable is a constant value. Sending this
+as either a copy or by reference will still pass a const which is not able to be modified.

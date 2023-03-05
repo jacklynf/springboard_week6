@@ -1,0 +1,4 @@
+&s matches &ncs/&cs when ncs/cs are passed by reference. When they are passed by value, 
+a copy is being sent to the function and the copy has its own memory address. When
+passing by reference, we are sending the address to the function which allows it to
+access the variable directly.
