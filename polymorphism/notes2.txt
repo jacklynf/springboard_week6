@@ -1,0 +1,15 @@
+In the wise words of cppreference.com, "if some member function vf is declared as virtual in
+a class Base, and some class Derived, which is derived, directly or indirectly, from Base,
+has a declaration for a member function with the same name, parameter type list, cv-qualifiers,
+ref-qualifiers, then this function in the class Derived is also virtual (whether or not the
+keyword virtual is used in its declaration and overrides Base::vf (whether or not the word 
+override is used in its declaration)."
+
+In my own words, it appears that the virtual and the override are implied when the function 
+within the derived class is the same as it is in the base class (with the exception being its 
+return type). 
+
+I think it was mentioned in our Sunday session that it's "polite" to write the virtual and
+the override in this scenario. I imagine it helps a lot with readability, plus I could also
+see this as being a good habit to have. Maybe you end up rewriting your derived class' virtual 
+function such that it differs slightly from the Base class, so it could save you some debugging.

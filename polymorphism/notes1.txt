@@ -1,0 +1,11 @@
+Here we have instantiated a Cow and a FullCow. Both are derived classes from the base class Animal.
+
+We then call the function poke() which takes a by-reference argument to our base class, Animal. poke()  
+calls the virtual function makesound().
+
+makesound() is called by its parameter variable, animal, which is type Animal but is passed a reference to the
+derived classes on each call that we've made here.
+
+makesound() is a virtual function in the base and derived classes, and override is declared in the derived classes.
+So when we call makesound() using a reference to the derived class, the compiler knows to use the makesound() function
+associated with the respective derived classes.
