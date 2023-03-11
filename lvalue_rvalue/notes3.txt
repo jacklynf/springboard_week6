@@ -1,0 +1,6 @@
+Now we have removed 2 func() functions. What is left is func() which accepts an int reference
+and a func() which accepts an rvalue int. 
+
+The compiler is complaining because we are attempting to send y, a const, to a function that
+accepts a non-const value. This would remove the protection that const offers y and therefore
+the compiler says no.

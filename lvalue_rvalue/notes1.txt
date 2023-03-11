@@ -1,0 +1,23 @@
+Output lines 1, 2, and 3: We are sending rvalues (in this case, literals) to the overloaded 
+func() function. The compiler found the func() that took rvalue references (&&) that were 
+non-const.
+
+Output line 4: x is an int variable, which means it has a defined region of storage. This makes
+it an lvalue. Sending x to func() prompted the compiler to find the appropriate function
+parameters to send x to - in this case, an int reference.
+
+Output line 5: Sending x/2 returns an rvalue which is the value that gets sent to func(). This
+is why the compiler matches this to an rvalue reference.
+
+Output line 6: cppreference.com says that the return value of the move() functions type&&, so
+calling move() on x returns an rvalue which we are then sending to func(). Again, the compiler
+matches this with the int && parameter.
+
+Output line 7: y is initialized as a const int variable. This has a block of memory and is
+therefore an lvalue. Since it is a const, the compiler matches this argument with the 
+int const & parameter.
+
+Output line 8: Similar to output line 5, we're returning an rvalue from the division and then
+sending that as the argument.
+
+Output line 9: The value returned from move is type&&, in this case int&&.

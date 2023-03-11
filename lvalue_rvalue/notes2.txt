@@ -1,0 +1,4 @@
+The last output line changed to a const lvalue reference. Disabling the if pragma caused
+the code within the block not to be compiled, so the compiler had to select another function
+for move(y) to be sent to. move() returns an rvalue, but y is also a const, so it opted to send
+y to the const l value parameter so that the value would remain a const. 
