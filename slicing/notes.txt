@@ -1,0 +1,13 @@
+Here we have slicing! On line 24, we've created a Cow object called c. 
+
+On line 26, we are assigning a derived class object to a base class reference. However,
+since the makesound() function is virtual in the base and derived class, the reference
+can access the makesound() function in the derived Cow class. If this were not a virtual
+function, cr would not have access to makesound() in Cow.
+
+Line 27 is where we are slicing. Mentally, I envision this as attempting to fit a shape into
+a hole that is too small for it, and the edges get cut off (the larger shape being a derived
+class, the smaller shape being a base class). We're assigning a copy of the derived class to
+a base class here, which "slices" off part of the information belonging to the derived class.
+This is why we're unable to access the derived class's makesound() function - the base class
+cannot access that information, therefore it is lost in the cs object.
